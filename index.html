@@ -1,1 +1,121 @@
 
+<!DOCTYPE html>
+<html lang="id">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>About Me | Salsabila ♡</title>
+<style>
+*{box-sizing:border-box}
+body{
+ margin:0;font-family:'Trebuchet MS',sans-serif;
+ color:#fff;text-align:center;overflow-x:hidden;
+ background:linear-gradient(180deg,#ffc9e2,#a8e8f5,#65c8e8);
+ min-height:100vh;
+}
+header{padding:35px 15px 170px;position:relative}
+h1{
+ font-size:clamp(42px,10vw,70px);margin:25px 0 10px;
+ color:#fff;text-shadow:3px 4px #f28bbd;
+ animation,float 3s ease-in-out infinite;
+}
+@keyframes float{50%{transform:translateY(-9px)}}
+.subtitle{color:#347c9d;font-size:15px}
+.card{
+ position:relative;z-index:2;background:#ffffffd9;color:#527c96;
+ width:min(88%,420px);margin:-100px auto 35px;
+ padding:25px;border-radius:28px;
+ border:3px solid #fff;
+ box-shadow:0 10px 30px #438ca544;
+ text-align:left;
+}
+.card h2{text-align:center;color:#ed83b6;margin-top:0}
+.info{
+ background:#fff0f7;border-radius:15px;padding:12px;
+ margin:10px 0;border:1px solid #ffd1e6;
+}
+.info b{color:#d96d9f}
+button{
+ border:0;border-radius:25px;padding:12px 20px;
+ margin:6px;background:#f38fbe;color:white;
+ font-weight:bold;font-size:14px;cursor:pointer;
+}
+button:active{transform:scale(.95)}
+.sea{
+ position:absolute;left:0;right:0;bottom:0;height:120px;
+ overflow:hidden;pointer-events:none;
+}
+.wave{
+ position:absolute;bottom:0;left:-50%;width:200%;height:100px;
+ background:#55c6e4;border-radius:43% 47% 0 0;
+ animation:wave 7s linear infinite;
+}
+.wave.two{
+ bottom:12px;background:#8be1ed;opacity:.8;
+ animation:wave 10s linear infinite reverse;
+}
+@keyframes wave{to{transform:translateX(25%) rotate(4deg)}}
+.bubble{
+ position:fixed;bottom:-30px;width:12px;height:12px;
+ border:2px solid #fff9;border-radius:50%;
+ animation:rise 8s linear infinite;pointer-events:none;
+}
+@keyframes rise{
+ to{transform:translateY(-110vh) translateX(35px);opacity:0}
+}
+footer{color:#397e9a;padding:20px;font-size:13px}
+</style>
+</head>
+<body>
+<header>
+ <div style="font-size:42px">🐚 🪼 🩷</div>
+ <h1>About Me</h1>
+ <p class="subtitle">♡ little ocean, little pink, a little about me ♡</p>
+ <div style="font-size:25px">𓇼 ⋆｡˚ 𓆝 ⋆｡˚ 𓇼</div>
+ <div class="sea">
+  <div class="wave"></div>
+  <div class="wave two"></div>
+ </div>
+</header>
+
+<main class="card">
+ <h2>୨୧ Hello, I'm Bila! ୨୧</h2>
+ <p style="text-align:center">Welcome to my little world 🌷</p>
+ <div class="info">🎀 <b>Nama:</b> Salsabila Tarida</div>
+ <div class="info">🩷 <b>Usia:</b> 15 tahun</div>
+ <div class="info">🏫 <b>Sekolah:</b> SMK Banjar Asri</div>
+ <div class="info">📚 <b>Kelas:</b> X TJKT 1</div>
+ <div class="info">🐚 <b>Alamat:</b> Sukamaju</div>
+ <p style="text-align:center;line-height:1.8">
+  Just a girl with little dreams and a big heart. ♡<br>
+  Keep smiling and enjoy the little things! 🫧
+ </p>
+ <div style="text-align:center">
+  <button onclick="playMusic()">♫ Play Music</button>
+  <button onclick="pauseMusic()">Ⅱ Pause</button>
+ </div>
+ <p style="font-size:11px;text-align:center">
+  Musik perlu file audio yang tersedia atau koneksi internet.
+ </p>
+</main>
+
+<footer>Made with ♡ by Salsabila Tarida · 𓆝 𓆟 𓆞</footer>
+
+<script>
+for(let i=0;i<16;i++){
+ let b=document.createElement('div');
+ b.className='bubble';
+ b.style.left=Math.random()*100+'%';
+ b.style.animationDelay=Math.random()*8+'s';
+ b.style.animationDuration=(6+Math.random()*7)+'s';
+ document.body.appendChild(b);
+}
+let music=new Audio();
+music.loop=true;
+function playMusic(){
+ alert('Tambahkan file musik milikmu terlebih dahulu untuk memutar lagu.');
+}
+function pauseMusic(){music.pause();}
+</script>
+</body>
+</html>
